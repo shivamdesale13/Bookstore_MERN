@@ -25,8 +25,8 @@ function Course() {
           <span className="text-pink-500"> Here! :)</span>
         </h1>
         <p className="mt-12">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea quam iste iure, ullam labore soluta, alias sint sed quis mollitia. At nihil veritatis modi, nesciunt doloribus mollitia eum hic unde. 
-          Excepturi impedit consequuntur pariatur architecto consectetur magni reiciendis eius esse sapiente ducimus debitis, blanditiis doloribus illum doloremque facere modi!
+        Explore a variety of free courses across different subjects, helping you learn new skills at your own pace.
+        From programming to personal development, these courses provide valuable knowledge without any cost! 🚀
         </p>
         <Link to="/">
         <button className="mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300">Back</button>

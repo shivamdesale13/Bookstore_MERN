@@ -4,9 +4,11 @@ import Login from './Login'
 import { useForm } from "react-hook-form";
 import axios from "axios"
 import toast from 'react-hot-toast';
+import bgimage from "../../public/bgimage.png"
 function Signup() {
   const location = useLocation()
   const navigate = useNavigate()
+  
   const from = location.state?.from?.pathname || "/"
   const {
       register,
@@ -41,6 +43,15 @@ function Signup() {
     };
   return (
     <>
+    <div style={{
+  backgroundImage: `url(${bgimage})`,
+  backgroundSize: "cover",  // Ensures the image covers the entire screen
+  backgroundPosition: "center",  // Centers the image
+  backgroundRepeat: "no-repeat",  // Prevents tiling
+  width: "100vw",  // Full viewport width
+  height: "100vh",  // Full viewport height
+}}>
+    
     <div className="flex h-screen items-center justify-center ">
     <div className="w-[600px]">
   <div className="modal-box">
@@ -86,13 +97,14 @@ function Signup() {
         <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
             Signup
         </button>
-        <p className="text-xl">Have account?{" "}<button className="udnerline text-blue-500 cursor-pointer" onClick={()=>document.getElementById("my_modal_3").showModal() }>Login</button>{" "}
+        <p className="text-xl">Have account?{" "}<button className="udnerline text-blue-500 cursor-pointer" onClick={()=>/*document.getElementById("my_modal_3").showModal()*/ navigate('/') }>Login</button>{" "}
         <Login />
         </p>
     </div>
     </form>
   </div>
 </div>
+    </div>
     </div>
     </>
   )
