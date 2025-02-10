@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios"
+import { BaseURL } from "./BaseURL";
 import toast from "react-hot-toast";
 
 function Login() {
@@ -16,7 +17,7 @@ function Login() {
       email:data.email,
       password:data.password,
     }
-    await axios.post("http://localhost:4001/user/login", userInfo)
+    await axios.post(`${BaseURL}/book`, userInfo)
     .then((res)=>{
       console.log(res.data)
       if(res.data){

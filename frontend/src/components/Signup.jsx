@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios"
 import toast from 'react-hot-toast';
 import bgimage from "../../public/bgimage.png"
+import { BaseURL } from './BaseURL';
 function Signup() {
   const location = useLocation()
   const navigate = useNavigate()
@@ -22,7 +23,7 @@ function Signup() {
         email:data.email,
         password:data.password,
       }
-      await axios.post("http://localhost:4001/user/signup", userInfo)
+      await axios.post(`${BaseURL}/book`, userInfo)
       .then((res)=>{
         console.log(res.data)
         if(res.data){

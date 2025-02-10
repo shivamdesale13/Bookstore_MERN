@@ -27,6 +27,9 @@ try {
 }
 
 // definig routes
+app.get('/',(req,res)=>{
+    res.status(200).send("Bookstore API");
+});
 app.use("/book", bookRoute)
 app.use("/user", userRoute)
 
